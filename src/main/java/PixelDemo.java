@@ -6,5 +6,10 @@ public class PixelDemo {
 
         pixel.incrementX();
         System.out.println(pixel.getX());
+
+        Pixel pixel2 = new Pixel(2, 7);
+        pixel.addOtherPixel(pixel2);
+        System.out.println("X: " + pixel.getX()); // da 5
+        System.out.println("Y: " + pixel.getY()); // da 11
     }
 }
