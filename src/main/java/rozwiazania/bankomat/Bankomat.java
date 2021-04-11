@@ -25,6 +25,7 @@ public class Bankomat {
         money = money - howMoneyYouNeed;
     }
 
+    //można wpłacić na raz max 5000
     void deposit(double cash) {
 
     }
@@ -33,6 +34,7 @@ public class Bankomat {
         return money >= howMoneyYouNeed;
     }
 
+    //można wypłacić na raz max 1000
     public boolean isPinCorrect(int pin){
         if (this.pin == pin) {
             return true;
