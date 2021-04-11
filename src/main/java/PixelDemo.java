@@ -3,5 +3,8 @@ public class PixelDemo {
         Pixel pixel = new Pixel(3,4);
         int result = pixel.getSum();
         System.out.println(result);
+
+        pixel.incrementX();
+        System.out.println(pixel.getX());
     }
 }

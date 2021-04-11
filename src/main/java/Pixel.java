@@ -13,5 +13,11 @@ public class Pixel {
         return x+y;
     }
 
+    public void incrementX() {
+        x +=1;
+    }
 
+    public int getX() {
+        return x;
+    }
 }
