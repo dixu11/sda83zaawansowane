@@ -24,7 +24,7 @@ class PlayerTest {
         //given
         //when
         woundedPlayer.heal(20);
-        //than
+        //then
         assertEquals(120, woundedPlayer.getHp());
         assertThat(woundedPlayer.getHp()).isEqualTo(120);//assertJ
     }
@@ -34,7 +34,7 @@ class PlayerTest {
         //given
         //when
         woundedPlayer.heal(51);
-        //than
+        //then
         assertThat(woundedPlayer.getHp()).isLessThanOrEqualTo(150);
     }
 

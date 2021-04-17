@@ -13,7 +13,7 @@ class BankomatTest {
     void newBankomat_should_have_concrete_money_value(){
         //given, when
         //Bankomat bankomat = new Bankomat(1234);
-        //than
+        //then
         assertEquals(5000,bankomat.getMoney());
         assertThat(bankomat.getMoney()).isEqualTo(5000); // assertJ
     }
@@ -25,7 +25,7 @@ class BankomatTest {
         //when
         boolean shouldBeCorrect = bankomat.isPinCorrect(1234);
         boolean shouldBeIncorrect = bankomat.isPinCorrect(3455);
-        //than
+        //then
         assertTrue(shouldBeCorrect);
         assertThat(shouldBeCorrect).isTrue(); // assertJ
         assertFalse(shouldBeIncorrect);
@@ -38,7 +38,7 @@ class BankomatTest {
         bankomat.takeMoney(4000);
         bankomat.takeMoney(1000);
 
-        //than
+        //then
         assertEquals(0,bankomat.getMoney());
     }
 
@@ -53,7 +53,7 @@ class BankomatTest {
         //when
         bankomat.takeMoney(5001);
 
-        //than
+        //then
         assertEquals(5000,bankomat.getMoney());
     }
 

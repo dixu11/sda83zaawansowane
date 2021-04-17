@@ -20,7 +20,7 @@ class WeaponTest {
         //when
         int dmg = sword.attack();
 
-        //than
+        //then
         assertThat(dmg)
                 .isLessThanOrEqualTo(40)
                 .isGreaterThanOrEqualTo(20);
