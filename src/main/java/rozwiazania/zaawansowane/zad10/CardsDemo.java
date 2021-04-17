@@ -1,5 +1,8 @@
 package rozwiazania.zaawansowane.zad10;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class CardsDemo {
 /*
 *
@@ -20,13 +23,25 @@ Stwórz całą talię, czyli listę wszystkich możliwych rang dla wszystkich mo
 * */
 
     public static void main(String[] args) {
-        Card card1 = new Card(Rank.ACE,Suit.CLUBS);
+        Card card1 = new Card(Rank.ACE, Suit.CLUBS);
         System.out.println(card1);
         Card card2 = new Card(Rank.QUEEN, Suit.DIAMONDS);
         System.out.println(card2);
+        //Week week = Week.CZWARTEK;
 
-        Week week = Week.CZWARTEK;
+        ArrayList<Card> cards = new ArrayList<>();
 
+
+        for (Suit suit : Suit.values()) {
+            for (Rank rank : Rank.values()) {
+                Card card = new Card(rank, suit);
+                cards.add(card);
+            }
+        }
+        System.out.println(cards);
+        War war = new War();
+        war.fight(card1,card2);
+        war.fight(new Card(Rank.JACK,Suit.SPADES),new Card(Rank.JACK,Suit.CLUBS));
 
     }
 }

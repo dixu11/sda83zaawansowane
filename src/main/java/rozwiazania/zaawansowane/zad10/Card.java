@@ -10,12 +10,12 @@ class Card {
         this.suit = suit;
     }
 
+    public int getStrength() {
+       return rank.getStrength();
+    }
 
     @Override
     public String toString() {
-        return "Card{" +
-                "rank=" + rank +
-                ", suit=" + suit +
-                '}';
+        return  rank.toString() +" "+ suit.toString();
     }
 }
