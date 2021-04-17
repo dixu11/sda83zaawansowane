@@ -1,4 +1,4 @@
-package rozwiazania.bankomat;
+package rozwiazania.podstawy.bankomat;
 
 import org.junit.jupiter.api.Test;
 

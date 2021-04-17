@@ -1,4 +1,4 @@
-package rozwiazania.zad44;
+package rozwiazania.podstawy.zad44;
 
 public class Calculator {
     public double sum(double firstValue, double secondValue) {

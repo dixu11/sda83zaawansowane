@@ -1,4 +1,4 @@
-package rozwiazania.bankomat;
+package rozwiazania.podstawy.bankomat;
 
 public class Bankomat {
 

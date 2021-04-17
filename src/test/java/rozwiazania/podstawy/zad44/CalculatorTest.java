@@ -1,8 +1,8 @@
-package rozwiazania.zad44;
+package rozwiazania.podstawy.zad44;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CalculatorTest {
    private Calculator calculator = new Calculator();
