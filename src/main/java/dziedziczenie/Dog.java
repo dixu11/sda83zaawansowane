@@ -26,6 +26,7 @@ class Dog extends Animal{
 
     @Override
     public void eat(){
+        super.eat(); // oryginalne działanie z klasy bazowej
         System.out.println("Pies je karmę dla psa");
     }
 

@@ -1,12 +1,10 @@
 package dziedziczenie;
 
-class Animal {
+abstract class Animal {
 
     public void eat() {
         System.out.println("Zwierze je");
     }
 
-    public void makeSound(){
-
-    }
+    public abstract void makeSound();
 }

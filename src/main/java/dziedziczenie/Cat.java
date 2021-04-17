@@ -24,6 +24,7 @@ class Cat extends Animal{
         System.out.println("Idzie spać...");
     }
 
+    @Override
     public void eat(){
         System.out.println("Kot je mysz");
     }

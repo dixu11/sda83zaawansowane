@@ -14,12 +14,16 @@ class DogDemo {
         cat.eat();
         System.out.println(cat);
         System.out.println("-- guide --");
+        Cow cow = new Cow();
         AnimalGuide guide = new AnimalGuide();
         guide.feedAnimal(dog);
         guide.feedAnimal(cat);
+        guide.feedAnimal(cow);
 
+//       Animal animal = new Animal();
+        //nie można zrobić obiektu bezpośrednio z klasy abstrakcyjne
 
-        Animal animal = new Dog();
+        Animal animal2 = new Dog();
     }
 }
 
