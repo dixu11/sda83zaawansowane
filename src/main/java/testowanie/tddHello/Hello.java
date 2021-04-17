@@ -1,4 +1,4 @@
-package tddHello;
+package testowanie.tddHello;
 
 public class Hello {
 

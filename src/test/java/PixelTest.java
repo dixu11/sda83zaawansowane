@@ -1,4 +1,5 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import testowanie.Pixel;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +12,28 @@ class PixelTest {
     public PixelTest() {
         System.out.println("Tworze klase testu i wraz z nią jej pola z pixelami");
     }
+
+    @BeforeAll //uruchmia się raz przed wszystkimi testami i wymaga oznaczenia static
+   static public void beforeAll() {
+        System.out.println("before all");
+    }
+
+    @BeforeEach // uruchamia się raz przed kazdym testem
+    public void before() {
+        System.out.println("before");
+    }
+
+    @AfterEach
+    public void after() {
+        System.out.println("after");
+    }
+
+    @AfterAll
+   static public void afterAll() {
+        System.out.println("after all");
+    }
+
+
 
     @Test
     public void getSum_should_sum_coordinates() {

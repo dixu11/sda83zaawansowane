@@ -1,3 +1,5 @@
+package testowanie;
+
 public class Pixel {
 
     private int x;

@@ -2,6 +2,7 @@ package rozwiazania.bankomat;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BankomatTest {
@@ -14,6 +15,7 @@ class BankomatTest {
         //Bankomat bankomat = new Bankomat(1234);
         //than
         assertEquals(5000,bankomat.getMoney());
+        assertThat(bankomat.getMoney()).isEqualTo(5000); // assertJ
     }
 
     @Test
@@ -25,7 +27,9 @@ class BankomatTest {
         boolean shouldBeIncorrect = bankomat.isPinCorrect(3455);
         //than
         assertTrue(shouldBeCorrect);
+        assertThat(shouldBeCorrect).isTrue(); // assertJ
         assertFalse(shouldBeIncorrect);
+        assertThat(shouldBeIncorrect).isFalse(); // assertJ
     }
 
     @Test

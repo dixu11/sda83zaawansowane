@@ -1,4 +1,4 @@
-package tdd;
+package testowanie.tdd;
 
 public class CalculatorTdd {
 

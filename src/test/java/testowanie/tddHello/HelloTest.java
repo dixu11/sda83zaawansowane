@@ -1,8 +1,8 @@
-package tddHello;
+package testowanie.tddHello;
 
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.util.StringUtils;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HelloTest {
@@ -47,7 +47,8 @@ class HelloTest {
         Hello hello = new Hello();
 
         String greeting = hello.greet("BOB");
-        assertEquals("HELLO, BOB!", greeting);
+        assertEquals("HELLO, BOB!", greeting); // JUnit
+        assertThat(greeting).isEqualTo("HELLO, BOB!"); // AssertJ
     }
 
 
