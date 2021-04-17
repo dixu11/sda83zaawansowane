@@ -13,8 +13,10 @@ class PlayerTest {
 
     @BeforeEach // wykonuje się przed testem
     public void setUp(){
-        healthyPlayer = new Player("warrior",100);
-        woundedPlayer = new Player("warrior",100,150);
+        Weapon sword = new Weapon("sword",20,40,5);
+        Weapon wand = new Weapon("wand", 0, 100, 6);
+        healthyPlayer = new Player("warrior",100,sword);
+        woundedPlayer = new Player("warrior",100,150,wand);
     }
 
     @Test
