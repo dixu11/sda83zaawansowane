@@ -1,6 +1,7 @@
 package rozwiazania.zaawansowane.zad10;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class CardsDemo {
@@ -42,6 +43,9 @@ Stwórz całą talię, czyli listę wszystkich możliwych rang dla wszystkich mo
         War war = new War();
         war.fight(card1,card2);
         war.fight(new Card(Rank.JACK,Suit.SPADES),new Card(Rank.JACK,Suit.CLUBS));
+
+        Collections.shuffle(cards);
+        System.out.println(cards);
 
     }
 }

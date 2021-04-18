@@ -50,7 +50,7 @@ class ListsDemo {
         text.add("dog");
         text.add("cat");
         text.add("dog");
-        text.add("monkey");
+        text.add(0,"monkey");
         System.out.println(text);
         text.remove("dog");
 //        int i = text.lastIndexOf("dog");

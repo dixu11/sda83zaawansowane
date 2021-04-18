@@ -1,11 +1,17 @@
 package dziedziczenie;
 
+import dziedziczenie.model.Animal;
+import dziedziczenie.model.Cat;
+import dziedziczenie.model.Cow;
+import dziedziczenie.model.Dog;
+
 class DogDemo {
     public static void main(String[] args) {
         Dog dog = new Dog("Bruno", 6);
         dog.makeSound();
         dog.fetch();
         dog.eat();
+
         System.out.println(dog);
 
         Cat cat = new Cat();
@@ -14,13 +20,13 @@ class DogDemo {
         cat.eat();
         System.out.println(cat);
         System.out.println("-- guide --");
-        Cow cow = new Cow();
+        Cow cow = new Cow("Mućka",4);
         AnimalGuide guide = new AnimalGuide();
         guide.feedAnimal(dog);
         guide.feedAnimal(cat);
         guide.feedAnimal(cow);
 
-//       Animal animal = new Animal();
+     //  Animal animal = new Animal();
         //nie można zrobić obiektu bezpośrednio z klasy abstrakcyjne
 
         Animal animal2 = new Dog();

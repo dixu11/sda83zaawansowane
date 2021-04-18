@@ -1,7 +1,10 @@
 package rozwiazania.zaawansowane.zad10;
 
 enum Suit {
-    SPADES("pik"), HEARTS("kier"), DIAMONDS("karo"), CLUBS("trefl");
+    SPADES("pik"),
+    HEARTS("kier"),
+    DIAMONDS("karo"),
+    CLUBS("trefl");
 
     private String polishName;
 
