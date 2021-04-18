@@ -18,7 +18,6 @@ class Application {
         repository.save();
     }
 
-
 }
 
 //dzięki takiej architekturze klasa Application nie wymaga
