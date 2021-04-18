@@ -1,5 +1,6 @@
 package wyjatki;
 
+import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ class ExceptionsHandlingDemo {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wpisz ulubioną liczbę :)");
-        try {
+        try  {
             String name2 = "Marcin";
             System.out.println("Twoje imie: " + name2.toUpperCase());
             int favorite = scanner.nextInt();
@@ -29,7 +30,7 @@ class ExceptionsHandlingDemo {
             System.out.println("Dlaczego nie podałeś liczby... :(");
         } catch (NullPointerException e) {
             System.out.println("Brak imienia");
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Niespodziewany wyjątek:");
             System.out.println(e.getMessage());
             e.printStackTrace();
