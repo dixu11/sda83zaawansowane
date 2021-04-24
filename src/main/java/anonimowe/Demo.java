@@ -23,6 +23,9 @@ public class Demo {
                 System.out.println("Ciężarówka jedzie");
             }
         };
+
+        System.out.println(car.getClass());
+        System.out.println(truck.getClass());
         truck.drive();
 
 
