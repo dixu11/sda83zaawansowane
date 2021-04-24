@@ -45,7 +45,7 @@ class KolejkiDemo {
 
         Deque<Integer> numbers = new LinkedList<>();
         //rozszerzony interfejs kolejek
-        //stos -> Last In First Out
+        //stos -> Last In First Out   // wykorzystamy metody pop / removeLast
 
         // do metod ograniczonych czasowo -> potrzebne w środowisku wielowątkowym
         //BlockingQueue<Integer> wielowatkoweZastosowanie = new ArrayBlockingQueue<>(10);
