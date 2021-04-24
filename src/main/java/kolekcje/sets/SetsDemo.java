@@ -9,7 +9,7 @@ class SetsDemo {
         //LinkedHashSet -> kolejność wg. wstawiania
         //TreeSet -> kolejność posortowana (wg. Comparable)
 
-        Set<String> namesSet = new TreeSet<>();
+        Set<String> namesSet = new HashSet<>();
         namesSet.add("Zofia");
         namesSet.add("Maria");
         namesSet.add("Anna");
