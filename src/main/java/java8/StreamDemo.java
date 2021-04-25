@@ -39,6 +39,8 @@ class StreamDemo {
         products.add(new Product("mleko",2.5));
         products.add(new Product("jajka", 6));
         products.add(new Product("jajka eco", 8));
+        products.add(new Product("jabłka 1kg", 2));
+
 
         products.stream()
                 .filter(product -> product.getPrice()>5)
@@ -61,6 +63,7 @@ class StreamDemo {
                 .map(product -> product.getName())
                 .map(name -> name.toUpperCase())
                 .filter(name -> name.startsWith("J"))
+                .sorted(  (name1,name2) ->  name2.compareTo(name1) )
                 .collect(Collectors.toList());
 
         System.out.println(names);
