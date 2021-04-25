@@ -24,7 +24,8 @@ class Caretaker {
     }
 
     public void restore() {
-        document.rollback(history.getLast());
+        if (history.isEmpty()) return; // dla jednej instrukcji działa bez klamry
+        document.rollback(history.removeLast());
     }
 
     @Override

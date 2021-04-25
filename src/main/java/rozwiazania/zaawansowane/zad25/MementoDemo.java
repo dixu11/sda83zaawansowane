@@ -42,20 +42,29 @@ przetestuj aplikację kilkukrotnie wywołując metody save() i reverse().
         System.out.println("--------------");
         Caretaker caretaker = new Caretaker(document); // zajmij się archiwizacją tego dokumentu
         caretaker.save();
+        System.out.println("CARETAKER: " + caretaker);
         System.out.println("Zapisany dokument: ");
         System.out.println(document);
         document.setColor("RED");
         System.out.println("Po modyfikacji:");
         System.out.println(document);
         caretaker.save();
+        System.out.println("CARETAKER: " + caretaker);
         document.setFontSize(6);
         System.out.println("Po kolejnej modyfikacji:");
         System.out.println(document);
         caretaker.restore();
+        System.out.println("CARETAKER: " + caretaker);
         System.out.println("Po odtworzeniu:");
         System.out.println(document);
         caretaker.restore();
+        System.out.println("CARETAKER: " + caretaker);
         System.out.println("Jeszcze jeden restore");
+        System.out.println(document);
+        System.out.println("Restore na pustym:");
+        caretaker.restore();
+        System.out.println("CARETAKER: " + caretaker);
+        System.out.println("Po odtworzeniu:");
         System.out.println(document);
     }
 }
