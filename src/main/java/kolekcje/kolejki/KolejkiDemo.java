@@ -57,5 +57,14 @@ class KolejkiDemo {
         priorityQueue.add(15);
         System.out.println(priorityQueue);
 
+
+        Deque<String> stack = new LinkedList<>();
+        stack.addLast("abc");
+        stack.addLast("def");
+        stack.addLast("ghi");
+        stack.addLast("jkl");
+        System.out.println(stack);
+        System.out.println("Zabrano: " + stack.removeLast());
+        System.out.println(stack);
     }
 }
