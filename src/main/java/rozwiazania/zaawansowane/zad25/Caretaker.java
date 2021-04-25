@@ -2,6 +2,7 @@ package rozwiazania.zaawansowane.zad25;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
 class Caretaker {
 
@@ -10,7 +11,6 @@ class Caretaker {
 
     private Document document;
     private Deque<DocumentMemento> history = new LinkedList<>();
-
 
     Caretaker(Document document) {
         this.document = document;
@@ -26,6 +26,7 @@ class Caretaker {
     public void restore() {
         if (history.isEmpty()) return; // dla jednej instrukcji działa bez klamry
         document.rollback(history.removeLast());
+
     }
 
     @Override

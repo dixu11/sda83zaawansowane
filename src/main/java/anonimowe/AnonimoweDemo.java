@@ -4,6 +4,7 @@ class AnonimoweDemo {
     public static void main(String[] args) {
 
         ButtonAction helloAction = new ButtonAction(){
+            @Override
             public void pushAction(){
                 System.out.println("Hello");
             }
