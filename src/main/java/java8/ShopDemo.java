@@ -53,8 +53,23 @@ class ShopDemo {
         Product znaleziony = productOptional3.orElse(new Product("Ocet", 2));
         System.out.println("Znaleziono w pudełku: " + znaleziony);
        // Product znaleziony2 = productOptional3.orElseThrow();
-        Product znaleziony2 = productOptional3.orElseThrow( () -> new NullPointerException("Lipa") );
-        System.out.println("Nie rzucił wyjątku tylko znalazł: " + znaleziony2);
+       // Product znaleziony2 = productOptional3.orElseThrow( () -> new NullPointerException("Lipa") );
+        //System.out.println("Nie rzucił wyjątku tylko znalazł: " + znaleziony2);
+
+        System.out.println("----------------");
+
+        System.out.println(shop.getProductsDescriptions());
+        Product withComponents = new Product("bułka", 0.50);
+        withComponents.addComponents("mąka", "prszenica");
+        shop.add(withComponents);
+
+        Product withComponents2 = new Product("Komputer",4000);
+        withComponents2.addComponents("karta graficzna","ram","procesor","płyta główna","zasilacz","dysk twardy");
+        shop.add(withComponents2);
+
+        System.out.println(shop);
+        System.out.println("All components list: " + shop.getAllComponents());
+        System.out.println("Srednia cena produktów: " + shop.getAveragePrice());
 
 
     }
