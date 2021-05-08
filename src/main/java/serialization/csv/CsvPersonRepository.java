@@ -13,7 +13,7 @@ class CsvPersonRepository implements PersonRepository {
     @Override
     public List<Person> loadPeople() {
         List<Person> people = new ArrayList<>();
-        try {
+        try  {
             FileReader fr = new FileReader(FILE_NAME);
             BufferedReader bufferedReader = new BufferedReader(fr);
             String line;
