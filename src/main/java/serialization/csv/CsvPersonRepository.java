@@ -6,20 +6,22 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class CsvPersonLoader implements PersonLoader {
+class CsvPersonRepository implements PersonRepository {
+
+    public static final String FILE_NAME = "src/main/java/serialization/csv/people.csv";
+
     @Override
     public List<Person> loadPeople() {
-        String fileName = "src/main/java/serialization/csv/people.csv";
         List<Person> people = new ArrayList<>();
         try {
-            FileReader fr = new FileReader(fileName);
+            FileReader fr = new FileReader(FILE_NAME);
             BufferedReader bufferedReader = new BufferedReader(fr);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 Person person = mapToPerson(line);
                 people.add(person);
             }
-
+            bufferedReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Nie znaleziono pliku");
         } catch (IOException e) {
@@ -29,12 +31,25 @@ class CsvPersonLoader implements PersonLoader {
         return people;
     }
 
+    @Override
+    public void savePeople(List<Person> people) {
+        //BufferedWriter - standardowy sposób
+        try {
+            PrintWriter out = new PrintWriter(FILE_NAME);
+            for (Person person : people) {
+                out.println(person.toCsv());
+            }
+            out.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public List<Person> loadPeople2() {
         String fileName = "src/main/java/serialization/csv/people.csv";
         try {
-           return new BufferedReader(new FileReader(fileName))
+            return new BufferedReader(new FileReader(fileName))
                     .lines()
                     .map(line -> mapToPerson(line))
                     .collect(Collectors.toList());
@@ -43,7 +58,6 @@ class CsvPersonLoader implements PersonLoader {
         }
         return Collections.emptyList();
     }
-
 
 
     private Person mapToPerson(String csvLine) {

@@ -22,6 +22,10 @@ class Person {
     }
 
 
+    public String toCsv() {
+        return name + "," + age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
