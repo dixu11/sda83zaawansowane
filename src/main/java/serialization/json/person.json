@@ -1,0 +1,9 @@
+{
+  "name": "Jan Kowalski",
+  "age": 77,
+  "address": {
+    "street": "Kolorowa",
+    "nr": 3
+  },
+  "nickNames": ["Janek","Jano","JanJan"]
+}
