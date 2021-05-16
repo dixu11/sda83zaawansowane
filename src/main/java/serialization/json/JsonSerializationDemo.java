@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 class JsonSerializationDemo {
     public static void main(String[] args) {
@@ -30,6 +32,15 @@ class JsonSerializationDemo {
            //przekazanie klasy: nazwa.class aby wiedział na co mapować
             Person person= objectMapper.readValue(file, Person.class);
             System.out.println(person);
+
+            //zaczytywanie json na mapę
+            Map<String, Object> jsonMap = objectMapper.readValue(file, Map.class);;
+            List<String> nickNames = (List<String>) jsonMap.get("nickNames");
+            System.out.println("Nick nr 2 to: " + nickNames.get(1));
+            System.out.println(jsonMap);
+            System.out.println(jsonMap.get("address").getClass());
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
