@@ -27,5 +27,12 @@ public class Vegetable {
         }
     }
 
+    public int getTimeToCook() {
+        return timeToCook;
+    }
+
+    public String getName() {
+        return name;
+    }
 
 }
