@@ -1,5 +1,7 @@
 package refleksja;
 
+import java.lang.annotation.Annotation;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.*;
 import java.util.Arrays;
 import java.util.List;
@@ -7,10 +9,13 @@ import java.util.Map;
 
 class ReflectionDemo {
 
+
+
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, NoSuchFieldException {
         Car car = new Car();
         car.ride();
         System.out.println(car);
+
 
         //stworzenie obiektu posiadającego informacje o klasie javowej
         Class<Car> carClass = Car.class;  // wykorzystanie TYPU
@@ -64,6 +69,11 @@ class ReflectionDemo {
         //ustaw na obiekcie w zmiennej car3, wartość pola price na 1
         price.set(car3, 1);
         System.out.println(car3); // samochod kosztuje 1zł :)
+
+
+        CarNationality annotation = carClass.getAnnotation(CarNationality.class);
+        System.out.println(annotation);
+        System.out.println(annotation.nationality());
 
     }
 

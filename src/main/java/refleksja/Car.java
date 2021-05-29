@@ -3,26 +3,30 @@ package refleksja;
 import java.io.Serializable;
 import java.util.Random;
 
-public   class Car implements Serializable,Comparable {
+//@CarNationality(nationality = "Poland")
+@CarNationality
+public class Car implements Serializable, Comparable {
 
-   private double price;
-   private String model;
+
+    private double price;
+    private String model;
 
 
     public Car() {
         System.out.println("Zrobiony");
-        price = new Random().nextInt(10000)+1000;
+        price = new Random().nextInt(10000) + 1000;
         model = "Honda Civic";
     }
 
-   public Car(double price, String model) {
+    public Car(double price, String model) {
         this.price = price;
         this.model = model;
     }
 
 
     public void ride(int distance) {
-        System.out.println("Jedziesz "  + distance +  "km samochodem " +model);
+        int number = 124;
+        System.out.println("Jedziesz " + distance + "km samochodem " + model);
     }
 
     public void ride() {
