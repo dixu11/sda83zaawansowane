@@ -19,4 +19,8 @@ public class PriceList {
     public void put(String flowerName, double price) {
         prices.put(flowerName, price);
     }
+
+    public double getPrice(String name) {
+        return prices.getOrDefault(name,-1.);
+    }
 }

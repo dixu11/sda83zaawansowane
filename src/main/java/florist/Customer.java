@@ -13,10 +13,14 @@ public class Customer {
     }
 
     public void add(Flower flower) {
-
+        cart.add(flower);
     }
 
     public ShoppingCart getShoppingCart() {
         return cart;
+    }
+
+    public String getName() {
+        return name;
     }
 }

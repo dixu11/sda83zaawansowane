@@ -1,7 +1,7 @@
 package florist;
 
 public class Lilac extends Flower{
-    public Lilac(int i) {
-
+    public Lilac(int amount) {
+        super("bez","biały",amount);
     }
 }
