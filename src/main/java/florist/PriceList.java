@@ -1,11 +1,22 @@
 package florist;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PriceList {
-    public static PriceList getInstance() {
-        return null;
+
+    static PriceList instance = new PriceList();
+    private Map<String, Double> prices = new HashMap<>();
+
+    private PriceList() {
+
     }
 
-    public void put(String róża, double v) {
+    public static PriceList getInstance() {
+        return instance;
+    }
 
+    public void put(String flowerName, double price) {
+        prices.put(flowerName, price);
     }
 }

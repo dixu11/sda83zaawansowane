@@ -1,6 +1,6 @@
 package florist;
 
-public class Rose {
+public class Rose extends Flower{
     public Rose(int i) {
     }
 }

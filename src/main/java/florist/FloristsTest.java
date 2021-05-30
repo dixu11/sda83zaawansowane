@@ -4,8 +4,8 @@ public class FloristsTest {
 
     // definicja metody sumowania wartosci kwiatów o podanym kolorze
   /*  static int valueOf(Box box, String color) {
-        *//*<- tu trzeba wpisac kod metody *//*
-    }
+        *//*<- tu trzeba wpisac kod metody
+    }*/
 
     public static void main(String[] args) {
         // Kwiaciarnia samoobsługowa
@@ -27,7 +27,7 @@ public class FloristsTest {
         // Pewnie je umieścił na wózku sklepowyem
         // Zobaczmy co tam ma
         ShoppingCart wozekJanka = janek.getShoppingCart();
-        System.out.println("Przed płaceniem " + wozekJanka);*/
+        System.out.println("Przed płaceniem " + wozekJanka);
 /*
         // Teraz za to zapłaci...
         janek.pay();
@@ -76,8 +76,8 @@ public class FloristsTest {
         // co ostatecznie udało mu się kupić
         System.out.println(pudelkoStefana);
         // ... i ile zostało mu pieniędzy
-        System.out.println("Stefanowi zostało : " + stefan.getCash() + " zł");
-    }*/
+        System.out.println("Stefanowi zostało : " + stefan.getCash() + " zł");*/
+    }
 }
 
 
